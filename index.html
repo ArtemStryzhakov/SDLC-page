@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>SDLC</title>
+  </head>
+
+<body> 
+  <style>
+    
+  body {
+    background-color: rgba(153, 153, 255, .5);
+  }
+
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+  }
+
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+</style>
+  
+  <h1>SDLC</h1>
+  <p>Software Development Life Cycle: </p>
+
+  <h2>Accordion</h2>
+
+  <button class="accordion">Requirement analysis and Planning</button>
+  <div class="panel">
+    <p>Requirements analysis and planning are the keys to the success of an implementation.</p>
+  </div>
+
+  <button class="accordion">Defining requirements</button>
+  <div class="panel">
+    <p>Defining requirements creates the foundation of a successful business intelligence (BI) solution by documenting what will be built. The categories of requirements are: business, data and data quality, functional, regulatory and compliance, and technical.</p>
+  </div>
+
+  <button class="accordion">Defining the Product Architecture</button>
+  <div class="panel">
+    <p>Product architecture is the organization (or chunking) of a product's functional elements. It's the ways these elements, or chunks, interact.</p>
+  </div>
+
+  <button class="accordion">Developing the Product</button>
+  <div class="panel">
+    <p>Product development is the complete process of delivering a new product or improving an existing one for customers.</p>
+  </div>
+
+  <button class="accordion">Testing the Product</button>
+  <div class="panel">
+    <p>The testing phase of product development ensures that the product operates as expected. This phase begins after the implementation of the product requirements.</p>
+  </div>
+
+  <button class="accordion">Deployment in the Market and Maintenance</button>
+  <div class="panel">
+    <p>The deployment phase is the final phase of the software development life cycle (SDLC) and puts the product into production.</p>
+  </div>
+
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
+</body>
+</html>
